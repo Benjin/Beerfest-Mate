@@ -1,0 +1,42 @@
+﻿<Window x:Class="BeerFinder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeerFinder"
+        mc:Ignorable="d"
+        Title="Beerfest Mate" Height="800" Width="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="1" Grid.Row="0" Width="200px">
+            <ProgressBar Name="loadProgress" Height="20" Margin="0 10" />
+            <Button Name="load" Content="Load beer info" Click="load_Click" Width="Auto" HorizontalAlignment="Center" Padding="5 0"/>
+            <Label Height="50" />
+            <RadioButton Name="allCheckbox" Content="All" IsChecked="True" Click="filter_Click"/>
+            <RadioButton Name="ipaCheckbox" Content="IPAs" Click="filter_Click"/>
+            <RadioButton Name="porterCheckbox" Content="Porters" Click="filter_Click"/>
+            <RadioButton Name="stoutCheckbox" Content="Stouts" Click="filter_Click"/>
+            <RadioButton Name="ciderCheckbox" Content="Ciders" Click="filter_Click"/>
+            <RadioButton Name="wheatCheckbox" Content="Wheats" Click="filter_Click"/>
+            <RadioButton Name="sourCheckbox" Content="Sours" Click="filter_Click"/>
+            <RadioButton Name="pilsnerCheckbox" Content="Pilsners" Click="filter_Click"/>
+            <!--<Button Name="apply" Content="Apply filters" Click="apply_Click" Width="Auto" HorizontalAlignment="Center" Padding="5 0"/>-->
+        </StackPanel>
+        <DataGrid Name="beerGrid" Grid.Row="0" Grid.Column="0" AutoGenerateColumns="False" Height="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Beer" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="Brewery" Binding="{Binding Brewery}" Width="*"/>
+                <DataGridTextColumn Header="Style" Binding="{Binding Style}" Width="*"/>
+                <DataGridTextColumn Header="Rating" Binding="{Binding Rating}" Width="Auto"/>
+                <DataGridTextColumn Header="ABV" Binding="{Binding ABV}" Width="Auto"/>
+                <DataGridTextColumn Header="IBUs" Binding="{Binding IBU}" Width="Auto"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

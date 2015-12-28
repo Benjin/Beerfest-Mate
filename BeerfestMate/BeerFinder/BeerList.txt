@@ -1,0 +1,833 @@
+﻿2
+	Bad Tom Smith	Black Kettle Stout	Stout with Spices	5.80%	Cincinnati	OH	17th Star
+3
+	Bad Tom Smith	Fink's Red Rye	Rye Ale	8.70%	Cincinnati	OH	17th Star
+4
+	Celler Dweller	Jerimiah	IPA	6.50%	Morrow	OH	17th Star
+5
+	Celler Dweller	Hopewell	Milk Stout	8.20%	Morrow	OH	17th Star
+6
+	
+Iron Fist Vista,California
+	Counter Strike	IPA	6.50%	Vista	CA	17th Star
+7
+	
+Iron Fist Vista,California
+	Uprising Triple	Belgian IPA	12%	Vista	CA	17th Star
+8
+	
+The Abbey Brewing Co.
+	Monk's Wit	Belgian Wheat	5.20%	Miami Beach	FL	17th Star
+9
+	
+The Abbey Brewing Co.
+	Monk's Dubbel	Belgian Dubbel	8.50%	Miami Beach	FL	17th Star
+10
+	5 Rabbit	5 Vulture	Chile Beer	6.40%	Chicago	IL	Caviler
+11
+	5 Rabbit	El Bizaron	American Porter	5%	Chicago	IL	Caviler
+12
+	Alltech	KY Bourbon Ale	English Strong	8.19%	Lexington	KY	Caviler
+13
+	Alltech	KY Bourbon Barrel Ale	English Strong	8.19%	Lexington	KY	Caviler
+14
+	Alltech	KY Kolsch	Kolsch	4.72%	Lexington	KY	Caviler
+15
+	Boulevard	80 Acre	Pale Wheat	5.50%	Kansas Ciy	Mo	Caviler
+16
+	Boulevard	Pop Up	IPA	4.30%	Kansas Ciy	Mo	Caviler
+17
+	Boulevard	Saison Brett	Saison	8.50%	Kansas Ciy	Mo	Caviler
+18
+	Boulevard	Single Wide	IPA	5.70%	Kansas Ciy	Mo	Caviler
+19
+	Boulevard	Tank 7	Saison	8.50%	Kansas Ciy	Mo	Caviler
+20
+	Boulevard	Unfiltered Wheat	American Pale Wheat	4.40%	Kansas Ciy	Mo	Caviler
+21
+	Breckenridge	471	Single Batch double IPA	9.20%	Breckenridge	CO	Caviler
+22
+	Breckenridge	Agave Wheat	Herb/spiced 	4.20%	Breckenridge	CO	Caviler
+23
+	Breckenridge	Ophelia	American Pale Wheat	5.00%	Breckenridge	CO	Caviler
+24
+	Breckenridge	Vanilla Porter	American Porter	4.70%	Breckenridge	CO	Caviler
+25
+	Crabbies	Orange 	Ginger Beer		Edinburgh	Scotland	Caviler
+26
+	Crabbies	Original	Ginger Beer		Edinburgh	Scotland	Caviler
+27
+	Dogfish Head	60 Minute	American IPA	6%	Milton	DE	Caviler
+28
+	Dogfish Head	Etrusca	Herbbed Spiced	8.50%	Milton	De	Caviler
+29
+	Dogfish Head	Namaste	Wit	4.80%	Milton	DE	Caviler
+30
+	Dogfish Head	Piercing Pils	Czech Pilsener	6%	Milton	De	Caviler
+31
+	Fat Heads	Bumbleberry	Fruit / Vegetable Beer	5.30%	North Olmsted	OH	Caviler
+32
+	Fat Heads	Goggle Fogger	Hefeweizen	5%	North Olmsted	OH	Caviler
+33
+	Fat Heads	Head Hunter	American IPA	7.50%	North Olmsted	OH	Caviler
+34
+	Fat Heads	Shakedown	Imperial American Stout		North Olmsted	OH	Caviler
+35
+	Fat Heads	Sunshine Daydream	American IPA	4.90%	North Olmsted	OH	Caviler
+36
+	Heavy Seas	Crossbone	American IPA	4.50%	Baltimore	MD	Caviler
+37
+	Heavy Seas	Cutlass/ Deep 6	English Porter	6.80%	Baltimore	MD	Caviler
+38
+	Hoppin Frog	Boris	Russian Imperial Stout	9.40%	Akron	OH	Caviler
+39
+	Hoppin Frog	King Gose Home	Gose	6%	Akron	OH	Caviler
+40
+	Jackie O's	Barking Pumpkin	Aged Spiced beer	7.50%	Athens	OH	Caviler
+41
+	Jackie O's	Java	Stout	6.50%	Athens	OH	Caviler
+42
+	Jackie O's	Mystic Mama	American IPA	7%	Athens	OH	Caviler
+43
+	Jackie O's	Razz Wheat	Fruit / Vegetable Beer	?	Athens	OH	Caviler
+44
+	Jolly Pumpkin	Bam Biere	Farm house	4.50%	Dextor 	Mi	Caviler
+45
+	Jolly Pumpkin	Maracabio	American Brown	7.50%	Dextor 	Mi	Caviler
+46
+	Left Hand	Milk Stout	Milk / Sweet Stout	6%	Longmont	CO	Caviler
+47
+	Left Hand	Sawtooth	ESB	5.30%	Longmont	CO	Caviler
+48
+	MadTree	BA Axis Mundi	BA Russian Imp	10%+	Cincinnati	OH	Caviler
+49
+	MadTree	Galaxy High	DIPA	11%	Cincinnati	OH	Caviler
+50
+	MadTree	Identity Crisis	American Porter	6.9%	Cincinnati	OH	Caviler
+51
+	MadTree	Lift	Kolsch	4.70%	Cincinnati	OH	Caviler
+52
+	MadTree	Psychopathy IPA	IPA	6.90%	Cincinnati	OH	Caviler
+53
+	MadTree	Sprye	Rye Ale	5%	Cincinnati	OH	Caviler
+54
+	North Coast	Brother Thelonious	Belgian Dark	9.40%	Fort Bragg	CA	Caviler
+55
+	North Coast	Le Merl	Farm House	7.90%	Fort Bragg	CA	Caviler
+56
+	North Coast	Old Raspiten	Stout	9%	Fort Bragg	CA	Caviler
+57
+	North Coast	Pranqster	Belgian Strong	7.60%	Fort Bragg	CA	Caviler
+58
+	Original Sin	Apple	Cider		York	NY	Caviler
+59
+	Original Sin	Cherry	Cider		York	NY	Caviler
+60
+	Radeberger	Pilsner	Pilsener	4.80%			Caviler
+61
+	Revolution	A Little Crazy	Belgian Pale	6.5	Chicago	IL	Caviler
+62
+	Revolution	Eugene Porter	Porter	6.80%	Chicago	IL	Caviler
+63
+	Revolution	Fist City	Session IPA	5.50%	Chicago	IL	Caviler
+64
+	Revolution	Juke Box Hero	Black IPA	7.50%	Chicago	IL	Caviler
+65
+	Schöfferhofer	Grapefruit Hefeweizen	Wheat Beer	2.50%	Germany		Caviler
+66
+	Stone	Arrogant Bastard	American Strong	7.20%	Escondido	CA	Caviler
+67
+	Stone	Coffe Milk Stout	Sweet stout	4.20%	Escondido	CA	Caviler
+68
+	Stone	Go to IPA	Session IPA	4.50%	Escondido	CA	Caviler
+69
+	Stone	Ruination	Double IPA	8.20%	Escondido	CA	Caviler
+70
+	Blue Mountain	Local Species	Belgian Strong Ale	6.60%	Afton	VA	Columbus
+71
+	Destihl	Wild Sour	Sour	3%	Bloomington	Il	Columbus
+72
+	Destihl	Flanders Red	Red	6.10%	Bloomington	Il	Columbus
+73
+	Destihl	Hoperation Overload	American Double	9.60%	Bloomington	Il	Columbus
+74
+	Elevator	Dark Horse	Dark Lager	5.30%	Columbus	OH	Columbus
+75
+	Elevator	Buckeye Red	ESB	5.70%	Columbus	OH	Columbus
+76
+	Elevator	Horney Goat	Porter	7.50%	Columbus	OH	Columbus
+77
+	Elevator	3 Frogs	IPA	8%	Columbus	OH	Columbus
+78
+	Elevator	Big Vic	Double IPA	8.60%	Columbus	OH	Columbus
+79
+	Elevator	Winter Warmer	Winter Warmer	8.60%	Columbus	OH	Columbus
+80
+	Elevator	Pale Ale	Pale Ale	?	Columbus	OH	Columbus
+81
+	Goose Island	312	Am. Pale Wheat Ale	5.40%	Chicago	IL	Columbus
+82
+	Goose Island	Ten Hills IPA	AM. Pale Ale	6.20%	Chicago	IL	Columbus
+83
+	Goose Island	Matilda	Belgian Strong	7.00%	Chicago	IL	Columbus
+84
+	Goose Island	Clyboure Ale Special	TBD	?	Chicago	IL	Columbus
+85
+	
+Griffen Cider works
+	Honey Oak Cider	Cider	6.90%	Westlake	OH	Columbus
+86
+	
+Griffen Cider works
+	Original Cider	Cider	7.00%	Westlake	OH	Columbus
+87
+	Maumee Bay	Blitzen	Winter Warmer	6.70%	Toledo	OH	Columbus
+88
+	Maumee Bay	Amarillo Brillo	American Double	8.50%	Toledo	OH	Columbus
+89
+	Maumee Bay	Total Eclipse	Imperial Stout	9.10%	Toledo	OH	Columbus
+90
+	Maumee Bay	Special	ESB		Toledo	OH	Columbus
+91
+	Omission	Lager	Lager	4.60%	Portland 	OR	Columbus
+92
+	Omission	Pale Ale	Pale Ale	5.80%	Portland 	OR	Columbus
+93
+	Omission	IPA	IPA	6.70%	Portland 	OR	Columbus
+94
+	Shock Top	Cholate wheat	American Dark Wheat Ale	4.30%	St. Loiuis	MO	Columbus
+95
+	Shock Top	Twisted Pretzel	American Pale Wheat Ale	5.20%	St. Loiuis	MO	Columbus
+96
+	Shock Top	Apple	Fruit Beer	5.20%	St. Loiuis	MO	Columbus
+97
+	Shock Top	Belgian White	Wit bier	5.20%	St. Loiuis	MO	Columbus
+98
+	SUMMIT	Saga	IPA	6.40%	Saint Paul	MN	Columbus
+99
+	SUMMIT	Union	3X Mild Ale	7.20%	Saint Paul	MN	Columbus
+100
+	SUMMIT	Herculean Special	Steam Beer	8.20%	Saint Paul	MN	Columbus
+101
+	Widmer	Alchemy	APA	5.80%	Portland	OR	Columbus
+102
+	Widmer	Upheavel	IPA	7.00%	Portland	OR	Columbus
+103
+	Zauber	Stodgy	Brown Ale	5.20%	Columbus	OH	Columbus
+104
+	Zauber	Vertigo	HefeWeizen	5.40%	Columbus	OH	Columbus
+105
+	Zauber	Ominous	Belgian Imperial Stout	9%	Columbus	OH	Columbus
+106
+	Zauber	Berzerker	Belgian IPA	?	Columbus	OH	Columbus
+107
+	Adams Revenge	Cider	Cider	6%	Westlake	OH	Glazer
+108
+	Sam Adams	Rebel Rider	American IPA	4.50%	Boston	MA	Glazer
+109
+	Traveler	Curious	Fruit/ Vegetable	4.40%	Burlington	Ve	Glazer
+110
+	Angry Orchard	Crisp Apple	Cider	4.40%	Boston	MA	Glazers
+111
+	Angry Orchard	Hop N Mad	Cider	4.40%	Boston	MA	Glazers
+112
+	Great Lakes	High Striker	Belgian Striker	5%	Cleveland	OH	Glazers
+113
+	Great Lakes	Edmond Fitzgerald	English IPA	7.50%	Cleveland	OH	Glazers
+114
+	Great Lakes	Commodore Perry	Am. Porter	5.80%	Cleveland	OH	Glazers
+115
+	Great Lakes	Dortmunder gold	Dortmunder/ Export	5.80%	Cleveland	OH	Glazers
+116
+	Sam Adams	Rebel Rouser	DIPA	8.50%	Boston	MA	Glazers
+117
+	Sam Adams	Rebel IPA	IPA	6.50%	Boston	MA	Glazers
+118
+	Sam Adams	Cold Snap (Q)	Herbed Spiced Beer	5.30%	Boston	MA	Glazers
+119
+	Sam Adams	Sam Stout	English Stout	4.50%	Boston	MA	Glazers
+120
+	Sierra Nevada	Nooner Pilsner	German Pilsener	5.20%	Chico	CA	Glazers
+121
+	Sierra Nevada	Hoppy Lager	
+American Double / Imperial Pilsner
+	5.20%	Chico	CA	Glazers
+122
+	Sierra Nevada	Hop Hunter	IPA	6.20%	Chico	CA	Glazers
+123
+	Traveler	Illusive	Fruit/ Vegetable	4.40%	Burlington	Ve	Glazers
+124
+	
+21st Amendment
+	Sneak Attack	Saison - Spring Seasonal	6.20%	San Francisco	CA	Heidelburg
+125
+	
+21st Amendment
+	Brew Free or Die	IPA	7%	San Francisco	CA	Heidelburg
+126
+Anderson Valley
+	The Kimmie, The Yink, & The Holy Gose	Gose	4.20%	Boonwille	CA	Heidelburg
+127
+	
+Bluegrass Brewing Co.
+	Bourbon Barrel Ale	American Strong Ale	8%	Louisville	KY	Heidelburg
+128
+	
+Bluegrass Brewing Co.
+	Bourbon Barrel Stout	American Imperial Stout	8.50%	Louisville	KY	Heidelburg
+129
+	
+Brewery Ommegang
+	Witte	Witbier	5.20%	Cooperstown	NY	Heidelburg
+130
+	
+Brewery Ommegang
+	Rare Vos	Belgian Amber	6.50%	Cooperstown	NY	Heidelburg
+131
+	
+Brooklyn Brewery
+	Winter Ale	Scottish Ale	6.10%	Brooklyn	NY	Heidelburg
+132
+	
+Brooklyn Brewery
+	Fire & Ice	American Smoked Porter	7.20%	Brooklyn	NY	Heidelburg
+133
+	
+Brooklyn Brewery
+	Sorachi Ace	Saison	7.60%	Brooklyn	NY	Heidelburg
+134
+	
+Brooklyn Brewery
+	Weizenhammer	Weizenbock	7.80%	Brooklyn	NY	Heidelburg
+135
+	
+Christian Moerlein
+	Zeppelin	Bavarian Pale Ale	5%	Cincinnati	OH	Heidelburg
+136
+	
+Christian Moerlein
+	Emancipator Doppelbock	Doppelbock	6.50%	Cincinnati	OH	Heidelburg
+137
+	
+Christian Moerlein
+	Red Hop Mess	Red IPA	7.20%	Cincinnati	OH	Heidelburg
+138
+	
+Christian Moerlein
+	Handlebar Double Stout	Double Stout	8.20%	Cincinnati	OH	Heidelburg
+139
+	
+Deschutes Brewery
+	Mirror Pond Pale Ale	Pale Ale	5%	Bend	OR	Heidelburg
+140
+	
+Deschutes Brewery
+	Black Butte Porter	Porter	5.20%	Bend	OR	Heidelburg
+141
+	
+Deschutes Brewery
+	Red Chair	Northwest Pale Ale	6.20%	Bend	OR	Heidelburg
+142
+	
+Deschutes Brewery
+	Fresh Squeezed IPA	IPA	6.40%	Bend	OR	Heidelburg
+143
+	
+Deschutes Brewery
+	Jubelale	Winter Warmer	6.70%	Bend	OR	Heidelburg
+144
+	Ithaca Beer Co.	Embrr Rye Porter	American Porter	6.60%	Ithaca	NY	Heidelburg
+145
+	Ithaca Beer Co.	Flower Power IPA	American IPA	7.50%	Ithaca	NY	Heidelburg
+146
+	Lost Coast	Tangerine Wheat	Fruit/Vegetable Beer	5%	Eureka	CA	Heidelburg
+147
+	
+McKenzie's Cider
+	Seasonal Reserve	Hard Cider	5%	West Seneca	NY	Heidelburg
+148
+	
+Mt. Carmel Brewing Co.
+	Blonde Ale	American Blonde	5.50%	Cincinnati	OH	Heidelburg
+149
+	
+Mt. Carmel Brewing Co.
+	Ohio's Amber Ale	American Amber	6%	Cincinnati	OH	Heidelburg
+150
+	
+Mt. Carmel Brewing Co.
+	Coffee Brown	American Brown Ale	6%	Cincinnati	OH	Heidelburg
+151
+	
+Mt. Carmel Brewing Co.
+	Imperial IPA	Imperial IPA	8.70%	Cincinnati	OH	Heidelburg
+152
+	New Planet	Blonde	American Blonde	5%	Bolder	CO	Heidelburg
+153
+	New Planet	Pale	APA	6.40%	Bolder	CO	Heidelburg
+154
+	New Planet	Raspberry	Fruit Vegetable	5%	Bolder	CO	Heidelburg
+155
+	New Planet	Amber	American Amber / Red Ale		Bolder	CO	Heidelburg
+156
+	New Planet	Belgian	Belgian Pale Ale	5%	Bolder	CO	Heidelburg
+157
+	New Planet	Brown	American Brown Ale	6%	Bolder	CO	Heidelburg
+158
+	
+No-Li Brewhouse
+	Rise & Grind	Coffee Stout	6.10%	Spokane	WA	Heidelburg
+159
+	
+No-Li Brewhouse
+	Born & Raised IPA	American IPA	7%	Spokane	WA	Heidelburg
+160
+	Rogue Farms	Seven Hop	American IPA	8.02%	Newport	OR	Heidelburg
+161
+	
+Smuttynose Brewing Co.
+	Vunderbar Pils	German Pilsner	5.20%	Hampton	NH	Heidelburg
+162
+	
+Smuttynose Brewing Co.
+	Winter Ale	Belgian Dubbel	5.83%	Hampton	NH	Heidelburg
+163
+	Thirsty Dog	Citra Dog IPA	American IPA	6.30%	Akron	OH	Heidelburg
+164
+	Thirsty Dog	Old Choco Mint Chocolate Milk Stout	Milk Stout	7%	Akron	OH	Heidelburg
+165
+	Thirsty Dog	Brux Porter d'Tarte	Barrel Project	9.20%	Akron	OH	Heidelburg
+166
+	
+Uinta Brewing Co.
+	Hop Nosh IPA	American IPA	7.30%	Salt Lake City	UT	Heidelburg
+167
+	
+Uinta Brewing Co.
+	Sea Legs	Baltic Porter	8%	Salt Lake City	UT	Heidelburg
+168
+	
+Victory Brewing Co.
+	Prima Pils	German Pilsner	5.30%	Downington	PA	Heidelburg
+169
+	
+Victory Brewing Co.
+	Hop Devil IPA	American IPA	6.70%	Downington	PA	Heidelburg
+170
+	
+Victory Brewing Co.
+	Winter Cheers	Hefeweizen	6.70%	Downington	PA	Heidelburg
+171
+	
+Victory Brewing Co.
+	DirtWolf	Imperial IPA	8.70%	Downington	PA	Heidelburg
+172
+	
+Woodchuck Cider
+	Hopsation	Hopped Cider	5%	Middlebury	VT	Heidelburg
+173
+	
+Woodchuck Cider
+	Belgian White	Belgian Cider	5.50%	Middlebury	VT	Heidelburg
+174
+	Abita	Purple Haze	Raspberry Wheat	4.20%	Abita Spring	LA	Premium
+175
+	Abita	Grapefruit Harvest	IPA	6%	Abita Spring	LA	Premium
+176
+	Ace	Berry	Cider	5%	Sebastopol	CA	Premium
+177
+	Ace	Joker	Cider	6.90%	Sebastopol	CA	Premium
+178
+	Ace	Black Jack 21	Cider	9%	Sebastopol	CA	Premium
+179
+	Alesmith	IPA	IPA	7.25%	San Diego	CA	Premium
+180
+	Alesmith	Speedway Stout	Stout	12%	San Diego	CA	Premium
+181
+	Ballast Point	Fathom	IPA	7%	San Diego	CA	Premium
+182
+	Ballast Point	Sculpin	IPA	7%	San Diego	CA	Premium
+183
+	Bells	Lager of the Lakes	Lager	4%	Kalamazoo	MI	Premium
+184
+	Bells	Amber Ale	Amber Ale	5.80%	Kalamazoo	MI	Premium
+185
+	Bells	Two Hearted	American IPA	7%	Kalamazoo	MI	Premium
+186
+	Bells	Vintage 2013 Third Coast	Old Ale	10.20%	Kalamazoo	MI	Premium
+187
+	Clown Shoes	Chocolate Sombrero	American Double stout	9%	Ipswich	MA	Premium
+188
+	Clown Shoes	Ohio Unidragon	Russian Imperial Stout	11.50%	Ipswich	MA	Premium
+189
+	Coronado	Hibiscus	IPA	4.90%	Coronado	CA	Premium
+190
+	Coronado	Orange Ave Wit	Wit	5.20%	Coronado	CA	Premium
+191
+	Coronado	Devils Tail	IPA	7.50%	Coronado	CA	Premium
+192
+	Crispin	Pear	cider	5%	Minneapolis	Mn	Premium
+193
+	Dark Horse	Crooked Tree IPA	American IPA		Marshall	MI	Premium
+194
+	Dark Horse	Scotty Karate	Scotch Ale	9.75%	Marshall	MI	Premium
+195
+	Epic	Escape to Colorado	IPA	6.20%	Salt Lake City	UT	Premium
+196
+	Epic	Imperial Pumpkin	Porter	8%	Salt Lake City	UT	Premium
+197
+	Epic	Brainless on Peaches	Belgian Style Ale	11.50%	Salt Lake City	UT	Premium
+198
+	Founders	All Day IPA	American IPA	4.70%	Grand Rapids	MI	Premium
+199
+	Founders	Reds Rye	Rye IPA	6.60%	Grand Rapids	MI	Premium
+200
+	Founders	Porter	Porter	7.20%	Grand Rapids	MI	Premium
+201
+	Founders	Dark Penance	Imperial Dark IPA	9.40%	Grand Rapids	MI	Premium
+202
+	Full Pint	Night of the living Stout	Stout	6.20%	North Versailles	PA	Premium
+203
+	Full Pint	Chinookie	IPA	7.10%	North Versailles	PA	Premium
+204
+	Green Flash	Jibe	Session IPA	4%	San Diego	CA	Premium
+205
+	Green Flash	Soul Style	IPA	6.50%	San Diego	CA	Premium
+206
+	Green Flash	Green Bullet	Triple IPA	10.10%	San Diego	CA	Premium
+207
+	Lagunitas	Pils	Pilsner	6%	Petaluma	CA	Premium
+208
+	Lagunitas	IPA	American IPA	6.20%	Petaluma	CA	Premium
+209
+	Lagunitas	Lil Sumpin Wild	Belgian IPA	8.80%	Petaluma	CA	Premium
+210
+	Lagunitas	Brown Sugga	American Strong Ale	9.90%	Petaluma	CA	Premium
+211
+	Lazy Magnolia	Southern Pecan	English Brown	4.39%	Kiln	Ms	Premium
+212
+	Lazy Magnolia	Southern Hopspitality	IPA	5.50%	Kiln	Ms	Premium
+213
+	New Holland	Paleooza	Michigan Pale Ale	4.40%	Holland	MI	Premium
+214
+	New Holland	Monkey King	Farmhouse Ale	5.60%	Holland	MI	Premium
+215
+	North Peak	Wanderer	Summer Wheat	4.20%	Traverse City	MI	Premium
+216
+	North Peak	Siren	Amber Ale	5%	Traverse City	MI	Premium
+217
+	Rivertowne	Hala Kahiki	Pineapple Ale	4.80%	Pittsburgh	PA	Premium
+218
+	Rivertowne	RT Lager	American Amber Lager	5.50%	Pittsburgh	PA	Premium
+219
+	Southern Tier	Live	American Pale Ale	5.50%	Lakewood	NY	Premium
+220
+	Southern Tier	2x IPA	IPA	8.10%	Lakewood	NY	Premium
+221
+	Southern Tier	Warlock	Imperial Stout	8.60%	Lakewood	NY	Premium
+222
+	Southern Tier	Choklat	
+Imperial Stout brewed with Chocolate
+	10%	Lakewood	NY	Premium
+223
+	The Brew Kettle	Awesome	American Pale Lager	4.70%	Strongsville	OH	Premium
+224
+	The Brew Kettle	4C Pale Ale	Pale Ale	5%	Strongsville	OH	Premium
+225
+	The Brew Kettle	Big Woody	Munich-Styles Helles	5.50%	Strongsville	OH	Premium
+226
+	The Brew Kettle	White Rajah	West Coast IPA	6.80%	Strongsville	OH	Premium
+227
+	The Brew Kettle	Kitka	Milk Stout	7.50%	Strongsville	OH	Premium
+228
+	The Brew Kettle	El Lupulo Libre	Double IPA	8.80%	Strongsville	OH	Premium
+229
+	Troegs	Trogenator	Double Bock	8.20%	Hershey	PA	Premium
+230
+	Vandermill	Totally Roasted	
+Cinamon roasted pecan steeped
+	6.80%	Spring Lake	MI	Premium
+231
+	Vandermill	Hard Apple	Cider		Spring Lake	MI	Premium
+232
+	Weyerbacher	Merry Monks	Tripel	9.30%	Easton	PA	Premium
+233
+	Weyerbacher	Blithering Idiot	English Barley Wine	11.10%	Easton	PA	Premium
+234
+	Yazoo	Sue	Imperial Smoked Porter	9.20%	Nashville	TN	Premium
+235
+	50 West	Elenore	Blonde	6%	Cincinnati	Oh	Self
+236
+	50 West	Main St Amber	Amber Ale	4.60%	Cincinnati	Oh	Self
+237
+	50 West	Coast to Coast	IPA	6.80%	Cincinnati	Oh	Self
+238
+	50 West	Jalopy Nose	Pepper Stout	8.60%	Cincinnati	Oh	Self
+239
+	
+Actual brewing
+	Orthodox	Winter IPA	6.90%	Columbus	OH	Self
+240
+	
+Actual brewing
+	Experimental hops 	Imp. Rye IPA	8.10%	Columbus	OH	Self
+241
+	
+Actual brewing
+	Fat Julian	Nitro Imp. Stout	9%	Columbus	OH	Self
+242
+	
+Actual brewing
+	Temporal	Belgian Ale -	?	Columbus	OH	Self
+243
+	Barley's	Scottish 	Scottish Ale	4.80%	Columbus	OH	Self
+244
+	Barley's	Centennial IPA	IPA	7.60%	Columbus	OH	Self
+245
+	Barley's	Blood Thirst Wheat	Wheat	5%	Columbus	OH	Self
+246
+	Barley's	Auld Curiosity	Old Ale	7.60%	Columbus	OH	Self
+247
+	Barley's	ESB	BItter	6.80%	Columbus	OH	Self
+248
+	
+Homestead Beer Co.	Stove Pipe Winter Porter	Porter	4.40%	Columbus	OH	Self
+249
+	
+Homestead Beer Co.	Tenpenny Amber	Amber	4.60%	Columbus	OH	Self
+250
+	
+Homestead Beer Co.	1805 IPA	IPA	5.90%	Columbus	OH	Self
+251
+	
+Homestead Beer Co.	Artists Series V: Decemberists IPA	IPA	6.40%	Columbus	OH	Self
+252
+	Land-grant				Columbus	OH	Self
+253
+	Land-grant				Columbus	OH	Self
+254
+	Land-grant				Columbus	OH	Self
+255
+	Land-grant				Columbus	OH	Self
+256
+	
+Legend Valley Cider
+	Sour Apple	Cider		St. Louisville	OH	Self
+257
+	
+Legend Valley Cider
+	Cherry	Cider		St. Louisville	OH	Self
+258
+	
+Legend Valley Cider
+	Cranberry	Cider		St. Louisville	OH	Self
+259
+	
+Legend Valley Cider
+	Sweet Apple	Cider		St. Louisville	OH	Self
+260
+	North High				Columbus	OH	Self
+261
+	North High				Columbus	OH	Self
+262
+	North High				Columbus	OH	Self
+263
+	North High				Columbus	OH	Self
+264
+	North High				Columbus	OH	Self
+265
+	Rhinegeist				Cincinnati	Oh	Self
+266
+	Rhinegeist				Cincinnati	Oh	Self
+267
+	Rhinegeist				Cincinnati	Oh	Self
+268
+	Rhinegeist				Cincinnati	Oh	Self
+269
+	Rhinegeist				Cincinnati	Oh	Self
+270
+	Rhinegeist				Cincinnati	Oh	Self
+271
+	Seventh Son				Columbus	OH	Self
+272
+	Seventh Son				Columbus	OH	Self
+273
+	Seventh Son				Columbus	OH	Self
+274
+	Seventh Son				Columbus	OH	Self
+275
+	Seventh Son				Columbus	OH	Self
+276
+	Spin Doktor	Hard Rootbeer 	Hard Rootbeer 	8%	Hudson	OH	Self
+277
+	Wesel Boy 	Anistasia	Russian S	8%	Zanesville	OH	Self
+278
+	Wesel Boy 	Dancing Ferret	IPA	6.60%	Zanesville	OH	Self
+279
+	Wesel Boy 	Rauch Wiesel 	Smoked Porter		Zanesville	OH	Self
+280
+	Wesel Boy 	Linser's	Bock	6.30%	Zanesville	OH	Self
+281
+	Wolfsridge	Dopplebock	Dopplebock	?	Columbus	OH	Self
+282
+	Wolfsridge	Blood Moon Imperial Red IPA	Red IPA	8.40%	Columbus	OH	Self
+283
+	Wolfsridge	Buchenrauch Smoked Lager	Smoked Lager	5.70%	Columbus	OH	Self
+284
+	Wolfsridge	Gold Standard Helles Lager	Helles Lager	5%	Columbus	OH	Self
+285
+	Yellow Springs	Captian Stardust	Saison	6.50%	Yellow Springs	OH	Self
+286
+	Yellow Springs	Maxed Out	Barrel Aged Stout	9.50%	Yellow Springs	OH	Self
+287
+	Zaftig	Scottish Perle	Choco Wee heavy	10%	Columbus	OH	Self
+288
+	Zaftig	Too Cans	Imp. IPA	?	Columbus	OH	Self
+289
+	Batch 19	Batch 19	Adjunct Lager	5.50%	Golden	Co	Superior
+290
+	Blue Moon	Belgian White	Witbier	5.40%	Golden	Co	Superior
+291
+	Blue Moon	White IPA	Witbier	5.40%	Golden	Co	Superior
+292
+	Blue Moon	First Peach	American Adjunct	5.50%	Golden	Co	Superior
+293
+	Blue Moon	Gingerbread Spice	Spiced Beer	5.90%	Golden	Co	Superior
+294
+	Cellar Rats	Rat Tail Ale	American Red	6%	Madison	Oh	superior
+295
+	Cellar Rats	Pipers IPA	IPA	7.20%	Madison	Oh	superior
+296
+	
+Columbus Brewing Comp
+	Dalton	IPA	4.50%	Columbus	Oh	Superior
+297
+	
+Columbus Brewing Comp
+	IPA	IPA	6.50%	Columbus	Oh	Superior
+298
+	
+Columbus Brewing Comp
+	Nightstick 	Black IPA	7.50%	Columbus	Oh	Superior
+299
+	
+Columbus Brewing Comp
+	Bodhi	DIPA	8%	Columbus	Oh	Superior
+300
+	
+Columbus Brewing Comp
+	Sohio Stout	Am. Stout	8.50%	Columbus	Oh	Superior
+301
+	
+Columbus Brewing Comp
+	Belgian Dark Strong	Belgian Dark Strong	9.50%	Columbus	Oh	Superior
+302
+	
+Columbus Brewing Comp
+	da Ruckus	barley wine		Columbus	Oh	Superior
+303
+	Crazy Mountain	Amber	Amber	6%	Edwards 	Co	superior
+304
+	Crazy Mountain	Pale	Pale 	6%	Edwards 	Co	superior
+305
+	Crispin	Blackberry	cider	5%	Minneapolis	Mn	Superior
+306
+	Crispin	Apple	cider	6.50%	Minneapolis	Mn	Superior
+307
+	Crispin	Steel Town	cider	6.90%	Minneapolis	Mn	Superior
+308
+	Four String	Brass Knuckle Pale Ale	APA	5.75%	Columbus	OH	superior
+309
+	Four String	Vanilla Porter	American Porter	6%	Columbus	OH	superior
+310
+	Four String	Solo Series	Saison	6%	Columbus	OH	superior
+311
+	Four String	Big Star White IPA	Belgian IPA	7%	Columbus	OH	superior
+312
+	
+Gordon Biersch
+	Marzen	Okoberfest	5.70%	Columbus	OH	superior
+313
+	
+Gordon Biersch
+	Export	Lager	5%	Columbus	OH	superior
+314
+	
+Gordon Biersch
+	Hefe	Hefeweizen	5.50%	Columbus	OH	superior
+315
+	
+Gordon Biersch
+	Brewer's Choice	TBA		Columbus	OH	superior
+316
+	Harpoon	UFO White	Witbier	4.80%	Boston	Ma	superior
+317
+	Harpoon	IPA	IPA	5.90%	Boston	Ma	superior
+318
+	Harpoon	Winter Warmer	Winter Warmer	5.90%	Boston	Ma	superior
+319
+	Harpoon	Czernobog Imperial Stout	Russian Imperial Stout	10%	Boston	Ma	superior
+320
+	Killians	Killians Irish Red	Amber	4.90%	Golden	Co	superior
+321
+	Leinenkugel	Helles Yeah	Hellas lager	5.50%	Chippewa Falls	Wi	Superior
+322
+	Leinenkugel	Big Butt Doppelbock	Dopple Bock	5.70%	Chippewa Falls	Wi	Superior
+323
+	Leinenkugel	Big Eddy Cherry Doppelschwarz		8.50%	Chippewa Falls	Wi	Superior
+324
+	Leinenkugel	Big Eddy RIS	Russian Imperial	9.50%	Chippewa Falls	Wi	Superior
+325
+	Leinenkugel	IPL	American Pale Lager		Chippewa Falls	Wi	Superior
+326
+	New Belgium	Slow Ride	IPA	4.50%	Fort Collins	CO	Superior
+327
+	New Belgium	Snapshot Wheat	American Pale Wheat	5%	Fort Collins	CO	Superior
+328
+	New Belgium	Fat Tire	Amber	5.20%	Fort Collins	CO	Superior
+329
+	New Belgium	Portage Porter	Poter	6%	Fort Collins	CO	Superior
+330
+	New Belgium	Ranger IPA	IPA	6.50%	Fort Collins	CO	Superior
+331
+	New Belgium	Lips of Faith Specialty			Fort Collins	CO	Superior
+332
+	Oskar Blues 	Mamas Little Yella Pils	Czech Pilsner	5.30%	Lyons	CO	Superior
+333
+	Oskar Blues 	Dales Pale Ale	APA	6.50%	Lyons	CO	Superior
+334
+	Oskar Blues 	Old Chub Nitro	Scotch Ale	8%	Lyons	CO	Superior
+335
+	Oskar Blues 	Ten Fidy Imperial Stout	Russian IMP	10.50%	Lyons	CO	Superior
+336
+	Peroni	Peroni	Pilsener	4.70%			Superior
+337
+	Pilsner Urquell	Pilsner Urquell	Pilsener	4.40%			Superior
+338
+	Redds	Apple	Fruit / Vegetable	5%	Milwaukee	Wi	Superior
+339
+	Redds	Strawberry	Fruit / Vegetable	5%	Milwaukee	Wi	Superior
+340
+	Redds	Green Apple	Fruit / Vegetable	5%	Milwaukee	Wi	Superior
+341
+	Rivertown	Divergent 	Berliner Weisse	3.80%	Cincinnati	OH	Superior
+342
+	Rivertown	Lil Sipa Session IPA	IPA	4.50%	Cincinnati	OH	Superior
+343
+	Rivertown	Winter	Winter Warmer	7.50%	Cincinnati	OH	Superior
+344
+	Rivertown	Roebling Porter	Porter	7.80%	Cincinnati	OH	Superior
+345
+	SweetWater	Blue	Fruit Vegetable	4.90%	Atlanta	Ga	Superior
+346
+	SweetWater	420	APA	5.40%	Atlanta	Ga	Superior
+347
+	SweetWater	IPA	IPA	6.30%	Atlanta	Ga	Superior
+348
+	SweetWater	Hop Hash	Double IPA	7.80%	Atlanta	Ga	Superior
+349
+	Third Shift	Third Shift Amber Lager	Lager	5.30%	Golden	CO	Superior
+350
+	Upland	Wheat	witbier	4.50%	Bloomington	In	Superior
+351
+	Upland	Dragonfly IPA	IPA	6.00%	Bloomington	In	Superior
