@@ -188,18 +188,87 @@ namespace BeerFinder
             loadProgress.IsEnabled = false;
         }
 
-        private void WriteToTextFile(string fileName)
+        private string CreateBeersStringToExport()
         {
-            string textToWrite = "";
-
             masterBeerList.Sort();
 
+            var textToWrite = string.Empty;
             foreach (Beer b in masterBeerList)
             {
                 textToWrite += b.Rating + "|" + b.Name + "|" + b.Brewery + "|" + b.Style + "|" + b.ABV + "\n";
             }
 
-            System.IO.File.WriteAllText(fileName, textToWrite);
+            return textToWrite;
+        }
+
+        private string CreateBreweryRankingsStringToExport()
+        {
+            var allBreweryRankings = RankAllBreweries();
+            var count = allBreweryRankings.FindCountOfEnumerable();
+            var sorted = new List<KeyValuePair<string, double>>();
+            foreach (var rating in allBreweryRankings)
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    if (sorted.Count == i)
+                    {
+                        sorted.Add(rating);
+                        break;
+                    }
+
+                    if (rating.Value > sorted[i].Value)
+                    {
+                        sorted.Insert(i, rating);
+                        break;
+                    }
+                }
+
+            }
+
+            var textToWrite = string.Empty;
+            foreach (var rating in sorted)
+            {
+                textToWrite += rating.Key + " = " + rating.Value + "\n";
+            }
+
+            return textToWrite;
+        }
+
+        private Dictionary<string, double> RankAllBreweries()
+        {
+            Dictionary<string, List<double>> breweriesAllRankings = new Dictionary<string, List<double>>();
+            Dictionary<string, double> breweriesAveragedRankings = new Dictionary<string, double>();
+
+            // aggregate the ratings
+            foreach (Beer b in masterBeerList)
+            {
+                if (!breweriesAllRankings.ContainsKey(b.Brewery))
+                {
+                    breweriesAllRankings.Add(b.Brewery, new List<double>());
+                }
+
+                if (b.Rating >= 0.5)
+                {
+                    breweriesAllRankings[b.Brewery].Add(b.Rating);
+                }
+            }
+
+            // average the ratings
+            foreach (var ratings in breweriesAllRankings)
+            {
+                double average = 0.0;
+                double sum = 0.0;
+                int count = ratings.Value.FindCountOfEnumerable();
+                foreach (var rating in ratings.Value)
+                {
+                    sum += rating;
+                    average = sum / count;
+                }
+
+                breweriesAveragedRankings.Add(ratings.Key, average);
+            }
+
+            return breweriesAveragedRankings;
         }
 
         private void ReadFromFile(string fileName)
@@ -238,7 +307,7 @@ namespace BeerFinder
             loadProgress.IsEnabled = false;
         }
 
-        private void export_Click(object sender, RoutedEventArgs e)
+        private void SaveToTextFile(string textToSave)
         {
             var saveDialog = new SaveFileDialog();
 
@@ -249,8 +318,18 @@ namespace BeerFinder
 
             if (result.Value)
             {
-                WriteToTextFile(saveDialog.FileName);
+                System.IO.File.WriteAllText(saveDialog.FileName, textToSave);
             }
+        }
+
+        private void export_Click(object sender, RoutedEventArgs e)
+        {
+            SaveToTextFile(CreateBeersStringToExport());
+        }
+
+        private void exportBreweries_Click(object sender, RoutedEventArgs e)
+        {
+            SaveToTextFile(CreateBreweryRankingsStringToExport());
         }
 
         private void filter_Click(object sender, RoutedEventArgs e)
@@ -274,5 +353,7 @@ namespace BeerFinder
                 ReadFromFile(fileBrowser.FileName);
             }
         }
+
+        
     }
 }

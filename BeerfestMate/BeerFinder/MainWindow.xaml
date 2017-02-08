@@ -19,7 +19,8 @@
             <Button Name="load" Content="Load updated beer info" Click="load_Click" Width="Auto" HorizontalAlignment="Center" Padding="5 0" Margin="0 5 0 5"/>
             <TextBlock HorizontalAlignment="Center">^Avoid this when possible^</TextBlock>
             <Button Name="loadSavedList" Content="Load saved beer info" Click="loadSavedList_Click"  Width="Auto" HorizontalAlignment="Center" Padding="5 0" Margin="0 25 0 5"/>
-            <Button Name="export" Content="export beer info" Click="export_Click" Width="Auto" HorizontalAlignment="Center" Padding="5 0" Margin="0 5 0 5"/>
+            <Button Name="exportBeers" Content="export beer info" Click="export_Click" Width="Auto" HorizontalAlignment="Center" Padding="5 0" Margin="0 5 0 5"/>
+            <Button Name="exportBreweries" Content="export brewery rankings" Click="exportBreweries_Click"  Width="Auto" HorizontalAlignment="Center" Padding="5 0" Margin="0 5 0 5"/>
             <Label Height="50" />
 
             <TextBlock TextWrapping="Wrap" Margin="0 0 0 10">Below filters are only updated when there is a beer list already loaded</TextBlock>
