@@ -1,22 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Fizzler;
 using System.Net;
 using System.IO;
 using Fizzler.Systems.HtmlAgilityPack;
 using HtmlAgilityPack;
+using Microsoft.Win32;
 
 namespace BeerFinder
 {
@@ -25,160 +15,345 @@ namespace BeerFinder
     /// </summary>
     public partial class MainWindow : Window
     {
-        string queryEndpointUrl = @"https://untappd.com/search?q=";
-        List<Beer> masterBeerList;
+        private const string untappdQueryEndpoint = @"https://untappd.com/search?q=";
+        private const string ebfBeerPage = "https://www.beeradvocate.com/extreme/beer/";
+        private const string microInvitationalBeerPage = "http://www.beeradvocate.com/micro/beer/";
+        private string beerFestivalToLookUp;
+        private List<Beer> masterBeerList;
 
         public MainWindow()
         {
             InitializeComponent();
             masterBeerList = new List<Beer>();
+
+            beerFestivalToLookUp = ebfBeerPage;
         }
 
-        private List<string> CleanInput(string fileName)
+        private async Task<List<Beer>> GetBeerListOffBeerAdvocate()
         {
-            StreamReader file = new StreamReader(fileName);
+            HttpWebRequest request;
+            HttpWebResponse response;
 
-            string line;
+            request = (HttpWebRequest)WebRequest.Create(beerFestivalToLookUp);
+            response = (HttpWebResponse)await request.GetResponseAsync();
+            if (response.StatusCode != HttpStatusCode.OK) return null;
 
-            List<string> lines = new List<string>();
+            var html = new HtmlDocument();
+            var stream = response.GetResponseStream();
+            var reader = new StreamReader(stream, response.CharacterSet == null ? null : Encoding.GetEncoding(response.CharacterSet));
+            var data = reader.ReadToEnd();
+            response.Close();
+            reader.Close();
+            html.LoadHtml(data);
 
-            while ((line = file.ReadLine()) != null)
+            return ParseBeerAdvocateWebpage(html.DocumentNode);
+        }
+
+        private List<Beer> ParseBeerAdvocateWebpage(HtmlNode document)
+        {
+            var divOfAllBeersAndBrewers = document.QuerySelector(".brewer").ParentNode;
+            var divs = divOfAllBeersAndBrewers.Children();
+
+            var preUntappdBeerList = new List<Beer>();
+            var curBrewery = "";
+
+            foreach (var div in divs)
             {
-                if (line.Length < 5)
-                    continue;
-
-                if (!line.Contains("\t"))
+                var className = div.GetAttributeValue("class", "");
+                switch (className)
                 {
-                    line += file.ReadLine();
+                    case "brewer":
+                        // parse as brewer
+                        curBrewery = div.FirstChild.InnerText;
+                        break;
+                    case "container":
+                        // parse as beer
+                        preUntappdBeerList.Add(this.ParseBeerAdvocateBeerDiv(div, curBrewery));
+                        break;
+                    default:
+                        break;
                 }
-
-                line = line.Trim();
-
-                string[] split = line.Split('\t');
-
-                lines.Add(split[0] + " " + split[1]);
             }
 
-            file.Close();
-
-            return lines;
+            return preUntappdBeerList;
         }
 
-        private async Task<List<Beer>> SearchBeers(List<string> queries)
+        private Beer ParseBeerAdvocateBeerDiv(HtmlNode div, string curBrewery)
+        {
+            var divChildren = div.Children();
+
+            double abv = 0.0;
+            double.TryParse(divChildren.GetEleFromEnumerable(2).InnerText, out abv);
+
+            var beer = new Beer(
+                divChildren.GetEleFromEnumerable(0).InnerText,
+                curBrewery,
+                divChildren.GetEleFromEnumerable(1).InnerText,
+                abv);
+
+            return beer;
+        }
+
+        private async Task<List<Beer>> SearchBeersOnUntappd(List<Beer> beersToQuery)
         {
             HttpWebRequest request;
             HttpWebResponse response;
 
             List<Beer> allBeers = new List<Beer>();
 
-            for (int i = 0; i < queries.Count; i++)
+            for (int i = 0; i < beersToQuery.Count; i++)
             {
-                loadProgress.Value = i * 100 / queries.Count;
-                string query = queries[i];
-                request = (HttpWebRequest)WebRequest.Create(queryEndpointUrl + query.Replace(' ', '+'));
-                response = (HttpWebResponse) await request.GetResponseAsync();
+                loadProgress.Value = i * 100 / beersToQuery.Count;
+                var curBeer = beersToQuery[i];
+                var beerToQuery = curBeer.Name + " " + curBeer.Brewery;
+                request = (HttpWebRequest)WebRequest.Create(untappdQueryEndpoint + beerToQuery.Replace(' ', '+'));
+                response = (HttpWebResponse)await request.GetResponseAsync();
 
-                if (response.StatusCode == HttpStatusCode.OK)
+                if (response.StatusCode != HttpStatusCode.OK)
                 {
-                    Stream stream = response.GetResponseStream();
-                    StreamReader reader = new StreamReader(stream, response.CharacterSet == null ? null : Encoding.GetEncoding(response.CharacterSet));
+                    continue;
+                }
 
-                    string data = reader.ReadToEnd();
+                var html = new HtmlDocument();
+                var stream = response.GetResponseStream();
+                var reader = new StreamReader(stream, response.CharacterSet == null ? null : Encoding.GetEncoding(response.CharacterSet));
+                var data = reader.ReadToEnd();
 
-                    response.Close();
-                    reader.Close();
+                response.Close();
+                reader.Close();
 
-                    HtmlDocument html = new HtmlDocument();
-                    html.LoadHtml(data);
-                    HtmlNode document = html.DocumentNode;
-                    
-                    IList<Beer> beers = SearchResultsToBeers(document.QuerySelectorAll(".beer-item"));
+                html.LoadHtml(data);
+                var document = html.DocumentNode;
 
-                    if (beers.Count <= 2)
-                    {
-                        foreach (Beer beer in beers)
-                            allBeers.Add(beer);
-                    }
-                    else // too many search results
-                    {
-                        allBeers.Add(beers[0]);
-                        allBeers.Add(beers[1]);
-                    }
+                // Purposefully finding only the first listed result.  If we ever want to grab more than
+                // the first result then we will need to use QuerySelectorAll and go from there
+                var beerNode = document.QuerySelector(".beer-item");
+
+                if (beerNode != null)
+                {
+                    curBeer.AddFieldsFromDom(beerNode);
+                    allBeers.Add(curBeer);
                 }
             }
 
             return allBeers;
         }
 
-        private IList<Beer> SearchResultsToBeers(IEnumerable<HtmlNode> html)
+        private void DoFilter()
         {
-            IList<Beer> beers = new List<Beer>();
+            List<BeerFilterType> listOfFilters = new List<BeerFilterType>();
 
-            foreach (HtmlNode node in html)
-            {
-                Beer beer = Beer.CreateFromDom(node);
-
-                if (beer.InProduction)
-                    beers.Add(beer);
-            }
-
-            return beers;
-        }
-
-        private void apply_Click(object sender, RoutedEventArgs e)
-        {
-            if ((bool)allCheckbox.IsChecked)
-            {
-                beerGrid.ItemsSource = masterBeerList;
-                return;
-            }
-
-            string filterKeyword;
-
+            if ((bool)ipaCheckbox.IsChecked)
+                listOfFilters.Add(BeerFilterType.ipa);
+            if ((bool)paleAleCheckbox.IsChecked)
+                listOfFilters.Add(BeerFilterType.paleAle);
+            if ((bool)stoutCheckbox.IsChecked)
+                listOfFilters.Add(BeerFilterType.stout);
+            if ((bool)porterCheckbox.IsChecked)
+                listOfFilters.Add(BeerFilterType.porter);
+            if ((bool)brownCheckbox.IsChecked)
+                listOfFilters.Add(BeerFilterType.brown);
+            if ((bool)wheatCheckbox.IsChecked)
+                listOfFilters.Add(BeerFilterType.wheat);
             if ((bool)pilsnerCheckbox.IsChecked)
-                filterKeyword = "pilsner";
-            else if ((bool)wheatCheckbox.IsChecked)
-                filterKeyword = "wheat";
-            else if ((bool)ipaCheckbox.IsChecked)
-                filterKeyword = "ipa";
-            else if ((bool)stoutCheckbox.IsChecked)
-                filterKeyword = "stout";
-            else if ((bool)ciderCheckbox.IsChecked)
-                filterKeyword = "cider";
-            else if ((bool)sourCheckbox.IsChecked)
-                filterKeyword = "sour";
-            else if ((bool)porterCheckbox.IsChecked)
-                filterKeyword = "porter";
-            else
-            {
-                beerGrid.ItemsSource = masterBeerList;
-                return;
-            }
+                listOfFilters.Add(BeerFilterType.pilsner);
+            if ((bool)lagerCheckbox.IsChecked)
+                listOfFilters.Add(BeerFilterType.lager);
+            if ((bool)belgianCheckbox.IsChecked)
+                listOfFilters.Add(BeerFilterType.belgian);
+            if ((bool)sourCheckbox.IsChecked)
+                listOfFilters.Add(BeerFilterType.sour);
+            if ((bool)ciderCheckbox.IsChecked)
+                listOfFilters.Add(BeerFilterType.cider);
+            if ((bool)fruitCheckbox.IsChecked)
+                listOfFilters.Add(BeerFilterType.fruit);
+            if ((bool)otherCheckbox.IsChecked)
+                listOfFilters.Add(BeerFilterType.other);
 
-            List<Beer> filteredBeers = new List<Beer>();
-            
-            foreach (Beer beer in masterBeerList)
-                if (beer.Style.ToLower().Contains(filterKeyword))
-                    filteredBeers.Add(beer);
+            var filteredBeers = BeerFilterer.DoFiltering(masterBeerList, listOfFilters);
+            filteredBeers.Sort();
 
             beerGrid.ItemsSource = filteredBeers;
         }
 
         private async void load_Click(object sender, RoutedEventArgs e)
         {
-            string fileName = @"..\..\BeerList.txt";
-            List<string> lines = CleanInput(fileName);
+            var preUntappdBeerList = await GetBeerListOffBeerAdvocate();
             loadProgress.Value = 0;
             loadProgress.IsEnabled = true;
-            masterBeerList = await SearchBeers(lines);
+            masterBeerList = await SearchBeersOnUntappd(preUntappdBeerList);
+            masterBeerList.Sort();
             beerGrid.ItemsSource = masterBeerList;
             loadProgress.Value = 0;
             loadProgress.IsEnabled = false;
         }
 
+        private string CreateBeersStringToExport()
+        {
+            masterBeerList.Sort();
+
+            var textToWrite = string.Empty;
+            foreach (Beer b in masterBeerList)
+            {
+                textToWrite += b.Rating + "|" + b.Name + "|" + b.Brewery + "|" + b.Style + "|" + b.ABV + "\n";
+            }
+
+            return textToWrite;
+        }
+
+        private string CreateBreweryRankingsStringToExport()
+        {
+            var allBreweryRankings = RankAllBreweries();
+            var count = allBreweryRankings.FindCountOfEnumerable();
+            var sorted = new List<KeyValuePair<string, double>>();
+            foreach (var rating in allBreweryRankings)
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    if (sorted.Count == i)
+                    {
+                        sorted.Add(rating);
+                        break;
+                    }
+
+                    if (rating.Value > sorted[i].Value)
+                    {
+                        sorted.Insert(i, rating);
+                        break;
+                    }
+                }
+
+            }
+
+            var textToWrite = string.Empty;
+            foreach (var rating in sorted)
+            {
+                textToWrite += rating.Key + " = " + rating.Value + "\n";
+            }
+
+            return textToWrite;
+        }
+
+        private Dictionary<string, double> RankAllBreweries()
+        {
+            Dictionary<string, List<double>> breweriesAllRankings = new Dictionary<string, List<double>>();
+            Dictionary<string, double> breweriesAveragedRankings = new Dictionary<string, double>();
+
+            // aggregate the ratings
+            foreach (Beer b in masterBeerList)
+            {
+                if (!breweriesAllRankings.ContainsKey(b.Brewery))
+                {
+                    breweriesAllRankings.Add(b.Brewery, new List<double>());
+                }
+
+                if (b.Rating >= 0.5)
+                {
+                    breweriesAllRankings[b.Brewery].Add(b.Rating);
+                }
+            }
+
+            // average the ratings
+            foreach (var ratings in breweriesAllRankings)
+            {
+                double average = 0.0;
+                double sum = 0.0;
+                int count = ratings.Value.FindCountOfEnumerable();
+                foreach (var rating in ratings.Value)
+                {
+                    sum += rating;
+                    average = sum / count;
+                }
+
+                breweriesAveragedRankings.Add(ratings.Key, average);
+            }
+
+            return breweriesAveragedRankings;
+        }
+
+        private void ReadFromFile(string fileName)
+        {
+            loadProgress.Value = 0;
+            loadProgress.IsEnabled = true;
+            this.masterBeerList.Clear();
+
+            var lines = System.IO.File.ReadAllLines(fileName);
+            var linesCount = lines.FindCountOfEnumerable();
+
+            for (int i = 0; i < linesCount; i++)
+            {
+                loadProgress.Value = i * 100 / linesCount;
+
+                var beerAttributes = lines[i].Split('|');
+
+                if (beerAttributes.FindCountOfEnumerable() < 5)
+                {
+                    continue;
+                }
+
+                double abv = 0.0;
+                double rating = 0.0;
+                double.TryParse(beerAttributes[4], out abv);
+                double.TryParse(beerAttributes[0], out rating);
+
+                var beer = new Beer(beerAttributes[1], beerAttributes[2], beerAttributes[3], rating, abv, -1);
+
+                masterBeerList.Add(beer);
+            }
+
+            masterBeerList.Sort();
+            beerGrid.ItemsSource = masterBeerList;
+            loadProgress.Value = 0;
+            loadProgress.IsEnabled = false;
+        }
+
+        private void SaveToTextFile(string textToSave)
+        {
+            var saveDialog = new SaveFileDialog();
+
+            saveDialog.Filter = "txt files (*.txt)|*.txt";
+            saveDialog.RestoreDirectory = true;
+
+            var result = saveDialog.ShowDialog();
+
+            if (result.Value)
+            {
+                System.IO.File.WriteAllText(saveDialog.FileName, textToSave);
+            }
+        }
+
+        private void export_Click(object sender, RoutedEventArgs e)
+        {
+            SaveToTextFile(CreateBeersStringToExport());
+        }
+
+        private void exportBreweries_Click(object sender, RoutedEventArgs e)
+        {
+            SaveToTextFile(CreateBreweryRankingsStringToExport());
+        }
+
         private void filter_Click(object sender, RoutedEventArgs e)
         {
-            apply_Click(sender, e);
+            DoFilter();
         }
+
+        private void loadSavedList_Click(object sender, RoutedEventArgs e)
+        {
+            var fileBrowser = new OpenFileDialog();
+            fileBrowser.InitialDirectory = "c:\\";
+            fileBrowser.Filter = "txt files (*.txt)|*.txt";
+            fileBrowser.RestoreDirectory = true;
+            fileBrowser.CheckFileExists = true;
+            fileBrowser.Multiselect = false;
+
+            var result = fileBrowser.ShowDialog();
+
+            if (result.Value)
+            {
+                ReadFromFile(fileBrowser.FileName);
+            }
+        }
+
+        
     }
 }

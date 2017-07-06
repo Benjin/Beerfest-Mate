@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BeerFinder"
         mc:Ignorable="d"
-        Title="Beerfest Mate" Height="800" Width="1200">
+        Title="Beerfest Mate" Height="800" Width="1600">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="5*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -16,26 +16,38 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Grid.Row="0" Width="200px">
             <ProgressBar Name="loadProgress" Height="20" Margin="0 10" />
-            <Button Name="load" Content="Load beer info" Click="load_Click" Width="Auto" HorizontalAlignment="Center" Padding="5 0"/>
+            <Button Name="load" Content="Load updated beer info" Click="load_Click" Width="Auto" HorizontalAlignment="Center" Padding="5 0" Margin="0 5 0 5"/>
+            <TextBlock HorizontalAlignment="Center">^Avoid this when possible^</TextBlock>
+            <Button Name="loadSavedList" Content="Load saved beer info" Click="loadSavedList_Click"  Width="Auto" HorizontalAlignment="Center" Padding="5 0" Margin="0 25 0 5"/>
+            <Button Name="exportBeers" Content="export beer info" Click="export_Click" Width="Auto" HorizontalAlignment="Center" Padding="5 0" Margin="0 5 0 5"/>
+            <Button Name="exportBreweries" Content="export brewery rankings" Click="exportBreweries_Click"  Width="Auto" HorizontalAlignment="Center" Padding="5 0" Margin="0 5 0 5"/>
             <Label Height="50" />
-            <RadioButton Name="allCheckbox" Content="All" IsChecked="True" Click="filter_Click"/>
-            <RadioButton Name="ipaCheckbox" Content="IPAs" Click="filter_Click"/>
-            <RadioButton Name="porterCheckbox" Content="Porters" Click="filter_Click"/>
-            <RadioButton Name="stoutCheckbox" Content="Stouts" Click="filter_Click"/>
-            <RadioButton Name="ciderCheckbox" Content="Ciders" Click="filter_Click"/>
-            <RadioButton Name="wheatCheckbox" Content="Wheats" Click="filter_Click"/>
-            <RadioButton Name="sourCheckbox" Content="Sours" Click="filter_Click"/>
-            <RadioButton Name="pilsnerCheckbox" Content="Pilsners" Click="filter_Click"/>
+
+            <TextBlock TextWrapping="Wrap" Margin="0 0 0 10">Below filters are only updated when there is a beer list already loaded</TextBlock>
+            <CheckBox Name="ipaCheckbox" Content="IPAs" IsChecked="True" Click="filter_Click"/>
+            <CheckBox Name="paleAleCheckbox" Content="Pale Ales" IsChecked="True" Click="filter_Click"/>
+            <CheckBox Name="stoutCheckbox" Content="Stouts" IsChecked="True" Click="filter_Click"/>
+            <CheckBox Name="porterCheckbox" Content="Porters" IsChecked="True" Click="filter_Click"/>
+            <CheckBox Name="brownCheckbox" Content="Browns" IsChecked="True" Click="filter_Click"/>
+            <CheckBox Name="wheatCheckbox" Content="Wheats" IsChecked="True" Click="filter_Click"/>
+            <CheckBox Name="pilsnerCheckbox" Content="Pilsners" IsChecked="True" Click="filter_Click"/>
+            <CheckBox Name="lagerCheckbox" Content="Lager" IsChecked="True" Click="filter_Click"/>
+            <CheckBox Name="belgianCheckbox" Content="Belgians" IsChecked="True" Click="filter_Click"/>
+            <CheckBox Name="sourCheckbox" Content="Sours" IsChecked="True" Click="filter_Click"/>
+            <CheckBox Name="ciderCheckbox" Content="Ciders" IsChecked="True" Click="filter_Click"/>
+            <CheckBox Name="fruitCheckbox" Content="Fruity" IsChecked="True" Click="filter_Click"/>
+            <CheckBox Name="otherCheckbox" Content="Other" IsChecked="True" Click="filter_Click"/>
+
             <!--<Button Name="apply" Content="Apply filters" Click="apply_Click" Width="Auto" HorizontalAlignment="Center" Padding="5 0"/>-->
         </StackPanel>
         <DataGrid Name="beerGrid" Grid.Row="0" Grid.Column="0" AutoGenerateColumns="False" Height="Auto">
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Untappd?" Binding="{Binding OnUntappd}" Width="Auto"/>
+                <DataGridTextColumn Header="Rating" Binding="{Binding Rating}" Width="Auto"/>
                 <DataGridTextColumn Header="Beer" Binding="{Binding Name}" Width="*"/>
                 <DataGridTextColumn Header="Brewery" Binding="{Binding Brewery}" Width="*"/>
-                <DataGridTextColumn Header="Style" Binding="{Binding Style}" Width="*"/>
-                <DataGridTextColumn Header="Rating" Binding="{Binding Rating}" Width="Auto"/>
+                <DataGridTextColumn Header="Style" Binding="{Binding Style}" Width="0.5*"/>
                 <DataGridTextColumn Header="ABV" Binding="{Binding ABV}" Width="Auto"/>
-                <DataGridTextColumn Header="IBUs" Binding="{Binding IBU}" Width="Auto"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
