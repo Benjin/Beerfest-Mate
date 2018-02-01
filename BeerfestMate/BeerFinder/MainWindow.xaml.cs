@@ -16,9 +16,6 @@ namespace BeerFinder
     public partial class MainWindow : Window
     {
         private const string untappdQueryEndpoint = @"https://untappd.com/search?q=";
-        private const string ebfBeerPage = "https://www.beeradvocate.com/extreme/beer/";
-        private const string microInvitationalBeerPage = "http://www.beeradvocate.com/micro/beer/";
-        private string beerFestivalToLookUp;
         private List<Beer> masterBeerList;
 
         public MainWindow()
@@ -26,7 +23,10 @@ namespace BeerFinder
             InitializeComponent();
             masterBeerList = new List<Beer>();
 
-            beerFestivalToLookUp = ebfBeerPage;
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\BeerFest");
+            
+            BeerFestUrl.Text = (string)(key?.GetValue("RecentUrl"));
+            key?.Close();
         }
 
         private async Task<List<Beer>> GetBeerListOffBeerAdvocate()
@@ -34,9 +34,14 @@ namespace BeerFinder
             HttpWebRequest request;
             HttpWebResponse response;
 
-            request = (HttpWebRequest)WebRequest.Create(beerFestivalToLookUp);
+            request = (HttpWebRequest)WebRequest.Create(BeerFestUrl.Text);
             response = (HttpWebResponse)await request.GetResponseAsync();
-            if (response.StatusCode != HttpStatusCode.OK) return null;
+
+            if (response.StatusCode != HttpStatusCode.OK)
+                return null;
+            
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"Software\BeerFest");
+            key.SetValue("RecentUrl", BeerFestUrl.Text, RegistryValueKind.String);
 
             var html = new HtmlDocument();
             var stream = response.GetResponseStream();
